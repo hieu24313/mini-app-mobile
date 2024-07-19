@@ -1,34 +1,137 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import {
   List,
   Page,
-  Icon,useNavigate
-} from 'zmp-ui';
-import { useRecoilValue } from 'recoil';
-import { userState } from '../state';
-
-import UserCard from '../components/user-card';
+  Icon,
+  useNavigate,
+  Header,
+  ImageViewer,
+  Text,
+} from "zmp-ui";
+import "../css/tailwind.css";
+import UserCard from "../components/user-card";
+import { useAuth } from "../context/AuthContext";
+import order from "../../public/order_icon.jpg";
+import cart from "../../public/shopping-cart.png";
+import json from "../mock_data/products.json";
+import { useCart } from "../context/CartContext";
 
 const HomePage = () => {
-  const user = useRecoilValue(userState);
-  const navigate = useNavigate()
+  const { user } = useAuth();
+  const { addToCart, products: cartProducts } = useCart();
+  const navigate = useNavigate();
+  const [products, setProducts] = useState(json);
+
   return (
     <Page className="page">
-    <div className="section-container">
-      <UserCard user={user}/> 
-    </div>
-    <div className="section-container">
-    <List >
-      <List.Item suffix={<Icon icon="zi-arrow-right"/>}>
-        <div  onClick={()=>navigate('/about')}>About</div>
-      </List.Item>
-      <List.Item suffix={<Icon icon="zi-arrow-right"/>}>
-        <div onClick={()=>navigate('/user')}>User</div>
-      </List.Item>
-    </List>
-    </div>
-  </Page>
+      <div
+        className="absolute inset-0 bg-customGreen w-full h-1/3"
+        style={{
+          top: "-8px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          borderRadius: "0 0 33% 33%",
+          zIndex: -1,
+        }}
+      ></div>
+      <div className="section-container">
+        <UserCard user={user} />
+      </div>
+      <div
+        className="bg-white rounded-2xl"
+        style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
+      >
+        <div className="flex justify-end h-12">
+          <span className="mt-4">50,000 đ</span>
+          <Icon className="mt-4 mr-6" icon="zi-chevron-right" />
+        </div>
+        <hr />
+        <div className="section-container">
+          <div className="flex justify-between items-center border-gray-300">
+            <a href="/about" className="flex flex-col items-center w-20">
+              <img className="icon w-12 h-12" src={order} alt="icon" />
+              <div className="mt-2">Đặt hàng</div>
+            </a>
+            <a href="/user" className="flex flex-col items-center w-20">
+              <img className="icon w-12 h-12" src={order} alt="icon" />
+              <div className="mt-1">Ưu đãi</div>
+            </a>
+            <a href="/user" className="flex flex-col items-center w-20">
+              <img className="icon w-12 h-12" src={order} alt="icon" />
+              <div className="mt-1">Thông tin</div>
+            </a>
+            <a href="/user" className="flex flex-col items-center w-20">
+              <img className="icon w-12 h-12" src={order} alt="icon" />
+              <div className="mt-1">Liên hệ</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="p-4 pr-0 left-0 right-0">
+        <Text className="font-bold text-xl">Sản phẩm mới</Text>
+        <div className="relative flex overflow-x-auto whitespace-nowrap scroll-container mt-2 right-0 ">
+          {products.length > 0 ? (
+            products.map((p) => (
+              <div key={p.id} className="shadow-lg bg-white mr-3 rounded-lg">
+                <div
+                  key={p.id}
+                  className="flex bg-white rounded-lg w-48 p-4 mr-4"
+                >
+                  <img
+                    className="h-32 w-full object-cover rounded-lg"
+                    src={p.photo_url}
+                    alt={p.name}
+                  />
+                </div>
+                <div>
+                  <Text className="mt-2 ml-4">{p.name}</Text>
+                  <div className="flex justify-between items-center">
+                  <Text className="font-bold ml-4 mt-2 mb-3">
+                    Giá: {p.price} đ
+                  </Text>
+                  <Icon icon="zi-add-story" onClick={() => addToCart(p)} color="green" className="mr-3 text-green-500" />
+                </div></div>
+              </div>
+            ))
+          ) : (
+            <p>Không có sản phẩm nào</p>
+          )}
+        </div>
+      </div>
+
+      <div className="p-4 pr-0">
+        <Text className="font-bold text-xl">Tin tức</Text>
+        <div className="relative flex overflow-x-auto whitespace-nowrap scroll-container mt-2 right-0 ">
+          <div className="shadow-lg bg-white mr-3 rounded-lg">
+            <div className="flex bg-white rounded-lg w-48 p-4 mr-4">
+              <img
+                className="h-32 w-full object-cover rounded-lg"
+                src={products[4].photo_url}
+                alt=""
+              />
+            </div>
+            <div>
+              <Text className="mt-2 ml-4">Lợi ích của việc ăn rau củ </Text>
+              <Text className="font-bold ml-4 mt-2 mb-3">Xem chi tiết</Text>
+            </div>
+          </div>
+          <div className="shadow-lg bg-white mr-3 rounded-lg">
+            <div className="flex bg-white rounded-lg w-48 p-4 mr-4">
+              <img
+                className="h-32 w-full object-cover rounded-lg"
+                src={products[5].photo_url}
+                alt=""
+              />
+            </div>
+            <div>
+              <Text className="mt-2 ml-4">Bảo quản trái cây đúng cách </Text>
+              <Text className="font-bold ml-4 mt-2 mb-3">Xem chi tiết</Text>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Page>
   );
-}
+};
 
 export default HomePage;

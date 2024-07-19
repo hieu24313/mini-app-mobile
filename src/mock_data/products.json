@@ -1,0 +1,107 @@
+[
+    {
+      "name": "Chuối Nam Mỹ",
+      "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/228923/bhx/chuoi-gia-giong-nam-my-trai-tu-120-220g-202407121459178144.jpg",
+      "quantity": "Hot",
+      "id": 2,
+      "price": 30000,
+      "category": "fruit"
+    },
+    {
+      "name": "Ớt chuông",
+      "photo_url": "https://www.nicepng.com/png/detail/52-525615_green-bell-pepper-png-green-capsicum-png.png",
+      "quantity": "Hot",
+      "id": 7,
+      "price": 5000,
+      "category": "Vegetable"
+    },
+    {
+      "name": "Ổi Đài Loan",
+      "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/226918/bhx/oi-dai-loan-trai-tu-220g-tro-len-202407121459272113.jpg",
+      "quantity": "Hot",
+      "id": 10,
+      "price": 20000,
+      "category": "fruit"
+    },
+    {
+      "name": "Dưa hấu",
+      "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/226966/bhx/dua-hau-khong-hat-trai-tu-2-kg-tro-len-202407121500558977.jpg",
+      "quantity": "Hot",
+      "id": 11,
+      "price": 20000,
+      "category": "Hot"
+    },
+    {
+      "name": "Cà chua",
+      "photo_url": "https://www.freepngimg.com/thumb/categories/2985.png",
+      "quantity": "Hot",
+      "id": 13,
+      "price": 5000,
+      "category": "Vegetable"
+    },
+    {
+      "name": "Táo New Zealand",
+      "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/294908/bhx/thung-tao-gala-mini-new-zealand-175kg-202407081518474836.jpg",
+      "quantity": "One Bunch",
+      "id": 16,
+      "price": 5000,
+      "category": "Hot"
+    },
+    {
+      "name": "Cam sành",
+      "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/321604/bhx/cam-sanh-trai-tu-130g-tro-len-202406061427246531_300x300.jpg",
+      "quantity": "One Kg",
+      "id": 18,
+      "price": 60000,
+      "category": "fruit"
+    },
+    {
+      "name": "Khoai tây",
+      "photo_url": "https://www.freepngimg.com/thumb/potato/7-potato-png-images-pictures-download-thumb.png",
+      "quantity": "One container",
+      "id": 20,
+      "price": 80000,
+      "category": "Vegetable"
+    },
+    {
+      "name": "Ớt",
+      "photo_url": "https://www.freepngimg.com/thumb/categories/2981.png",
+      "quantity": "Hot",
+      "id": 21,
+      "price": 15000,
+      "category": "Vegetable"
+    },
+    {
+      "name": "Mít Thái",
+      "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/314554/bhx/mit-thai-xe-mieng-202403291353209564_300x300.jpg",
+      "quantity": "One Bunch",
+      "id": 22,
+      "price": 20000,
+      "category": "fruit"
+    },
+    {
+      "name": "Xoài tứ quý",
+      "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/234063/bhx/xoai-tu-quy-trai-tu-400g-tro-len-202406061429235173_300x300.jpg",
+      "quantity": "Hot",
+      "id": 23,
+      "price": 25000,
+      "category": "fruit"
+    },
+    {
+      "name": "Cóc lớn",
+      "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/228876/bhx/coc-lon-trai-tu-160g-tro-len-202406061429405478_300x300.jpg",
+      "quantity": "Hot",
+      "id": 24,
+      "price": 30000,
+      "category": "fruit"
+    },
+    {
+      "name": "Thanh long",
+      "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/234065/bhx/thanh-long-ruot-do-trai-tu-300g-tro-len-202407121501279431.jpg",
+      "quantity": "One Kg",
+      "id": 25,
+      "price": 40000,
+      "category": "fruit"
+    }
+  ]
+  

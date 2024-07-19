@@ -1,12 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-    .page {
-      padding: 16px 16px 96px 16px;
-    }
-    
-    .section-container {
-      padding: 16px;
-      background: #ffffff;
-      border-radius: 8px;
-      margin-bottom: 24px;
-    }    
-    
+.page {
+  padding: 16px 16px 96px 16px;
+}
+
+.section-container {
+  padding: 16px;
+  /* background: #ffffff; */
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.scroll-container {
+  overflow-x: auto;
+  -ms-overflow-style: none;  /* Ẩn thanh cuộn trên Internet Explorer và Edge */
+  scrollbar-width: none;     /* Ẩn thanh cuộn trên Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Ẩn thanh cuộn trên Chrome, Safari và Opera */
+}
+
+.padding-lr-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.icon-container .badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  padding: 3px 6px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  font-size: 12px;
+}

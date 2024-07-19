@@ -1,0 +1,18 @@
+[
+    {   "key": "Hot",
+        "name": "Bán chạy",
+        "image": "https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/256x256/fire.png"
+    },
+    {   "key": "fruit",
+        "name": "Trái cây",
+        "image": "https://cdn-icons-png.flaticon.com/256/6039/6039507.png"
+    },
+    {   "key": "Vegetable",
+        "name": "Rau củ",
+        "image": "https://cdn.iconscout.com/icon/premium/png-256-thumb/vegetable-1401149-1188317.png"
+    },
+    {   "key": "other",
+        "name": "Phân bón",
+        "image": "https://lh6.googleusercontent.com/proxy/OD-HGdXXUu7wiMGBem_rHzboyO4OhFff2q4eqO_sjnTPvpLaqSxVwrKtPlYUE-o4KnPm5dkEStHm9W_egNRaEICYk-nXEvkYxF8"
+    }
+]

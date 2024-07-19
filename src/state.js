@@ -4,7 +4,7 @@ export const userState = atom({
   key: "user",
   default: {
     id: '12345678',
-    name: 'Zalo',
+    name: 'Chưa đăng nhập',
     avatar: 'ZA',
   }
 })

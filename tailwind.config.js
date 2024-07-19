@@ -4,6 +4,10 @@ module.exports = {
     content: ['./src/**/*.{js,jsx,ts,tsx,vue}'],
   },
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        customGreen: 'rgba(76, 180, 39, 1)',
+      },
+    },
   },
 };
