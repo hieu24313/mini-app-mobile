@@ -1,9 +1,9 @@
-import React, { createContext, useState, useContext, useEffect } from 'react';
+import React, { createContext, useState, useContext, useEffect } from "react";
 import { setStorage, getStorage, removeStorage } from "zmp-sdk/apis";
-import { authApi, endpoints } from '../config/APIs';
+import { authApi, endpoints } from "../config/APIs";
 import { authorize, getSetting, getUserInfo } from "zmp-sdk";
-import { userState } from '../state';
-import { useRecoilValue } from 'recoil';
+import { userState } from "../state";
+import { useRecoilValue } from "recoil";
 
 const AuthContext = createContext();
 
@@ -37,8 +37,15 @@ export const AuthProvider = ({ children }) => {
         if (permUserInfo) {
           const user = await getUserInfoZalo();
           // Xử lý với user ở đây
-          setUser(user)
-          console.log(user)
+          setUser(user);
+          console.log(user);
+          setUser((pre) => ({
+            ...pre,
+            phone_number: "0123456789",
+            email: "ZA@ZA.zalo",
+            dob: "",
+            gender: "Male",
+          }));
         } else {
           // Xin quyền name, avatar
           const permResult = await authorize({ scopes: ["scope.userInfo"] });
@@ -46,7 +53,15 @@ export const AuthProvider = ({ children }) => {
           // console.log(permResult);
           if (permResult) {
             const user = await getUserInfoZalo();
-            setUser(user)
+            setUser(user);
+            console.log(user);
+            setUser((pre) => ({
+              ...pre,
+              phone_number: "0123456789",
+              email: "ZA@ZA.zalo",
+              dob: "",
+              gender: "Male",
+            }));
             // Xử lý với user ở đây
           } else {
             console.log(false);
@@ -61,9 +76,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user }}>
-      {children}
-    </AuthContext.Provider>
+    <AuthContext.Provider value={{ user }}>{children}</AuthContext.Provider>
   );
 };
 

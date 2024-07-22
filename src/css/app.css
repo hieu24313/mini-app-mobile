@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  font-size: 15px;
+}
 .page {
   padding: 16px 16px 96px 16px;
 }

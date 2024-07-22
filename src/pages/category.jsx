@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import category_json from "../mock_data/category.json";
-import { Box, Header, Input, Page, Select, Slider, Text } from "zmp-ui";
+import { Box, Header, Icon, Input, Page, Select, Slider, Text } from "zmp-ui";
 import json from "../mock_data/products.json";
+import { useCart } from "../context/CartContext";
 
 const Category = () => {
   const [category, setCategory] = useState(category_json);
   const [products, setProducts] = useState(json);
   const [baseProducts, setBaseProducts] = useState(json);
   const [choiceCategory, setChoiceCategory] = useState("");
+  const { addToCart, products: cartProducts } = useCart();
 
   const filterProduct = (key) => {
     if (key == choiceCategory) {
@@ -58,21 +60,22 @@ const Category = () => {
           />
         </div>
         <div className="max-w-full max-h-full">
-          <div className="w-full h-2/5 flex">
+          <div className="w-full h-3/5 flex">
             <div className="w-full h-full flex items-center justify-around overflow-x-auto scroll-container">
               {category.length > 0 ? (
                 <>
                   {category.map((c) => (
                     <div
                       key={c.key}
-                      className="h-1/4 w-24 ml-[2px] mr-[2px]"
+                      className=" w-24 ml-[2px] mr-[2px] h-32"
                       onClick={() => filterProduct(c.key)}
                     >
-                      <div className="shadow-lg bg-white p-3 rounded-lg mt-1 mb-1 relative">
+                      <div className={choiceCategory == c.key ? "shadow-lg bg-white p-3 rounded-lg mt-1 mb-1 relative h-28 items-center flex flex-col text-customGreen" : "p-3 mt-1 mb-1 relative h-28 items-center flex flex-col"} >
                         <img
-                          className="h-4 w-4 object-cover rounded-lg"
+                          className="h-12 w-12 object-cover rounded-lg"
                           src={c.image}
                           alt={c.name}
+                          style={{ mixBlendMode: "multiply" }}
                         />
                         <Text className="">{c.name}</Text>
                         {choiceCategory === c.key ? (
@@ -96,8 +99,8 @@ const Category = () => {
               )}
             </div>
           </div>
-          <div className="flex">
-            <div className="h-screen w-1/4 mt-0 bg-white">
+          <div className="flex bg-white">
+            <div className="h-screen w-1/5 mt-0 bg-white min-h-screen">
               <div className="ml-1">
                 <div className="mt-2">
                   <Text.Title size="small">Xếp theo giá</Text.Title>
@@ -121,7 +124,7 @@ const Category = () => {
                 </div>
               </div>
             </div>
-            <div className="h-full w-3/4 mt-0 bg-white border-b mb-[65px]">
+            <div className="h-full w-4/5 mt-0 bg-white border-b mb-[48px]">
               <div className="flex flex-wrap mt-5">
                 {products.length > 0 ? (
                   products.map((p) => (
@@ -134,11 +137,36 @@ const Category = () => {
                         src={p.photo_url}
                         alt={p.name}
                       />
+
+                      {/* <div>
+                  <Text className="mt-2 ml-4">{p.name}</Text>
+                  <div className="flex justify-between items-center">
+                    <Text className="font-bold ml-4 mt-2 mb-3">
+                      Giá: {p.price} đ
+                    </Text>
+                    <Icon
+                      icon="zi-add-story"
+                      onClick={() => addToCart(p)}
+                      color="green"
+                      className="mr-3 text-green-500"
+                    />
+                  </div>
+                </div> */}
+
                       <div>
                         <Text className="mt-2">{p.name}</Text>
-                        <Text className="font-bold mt-2 mb-3">
-                          Giá: {p.price} đ
-                        </Text>
+                        <div className="flex justify-between items-center">
+                          <Text className="font-bold mt-2 mb-3">
+                            Giá: {p.price} đ
+                          </Text>
+                          <Icon
+                          
+                            icon="zi-add-story"
+                            onClick={() => addToCart(p)}
+                            color="green"
+                            className="mr-0 text-green-500 right-0"
+                          />
+                        </div>
                       </div>
                     </div>
                   ))
