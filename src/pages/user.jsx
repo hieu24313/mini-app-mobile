@@ -14,7 +14,12 @@ import { useRecoilValue } from "recoil";
 import { userState } from "../state";
 import UserCard from "../components/user-card";
 import { useAuth } from "../context/AuthContext";
-import cydeva_icon from "../../public/cydeva.png"
+import cydeva_icon from "../../public/cydeva.png";
+import gift from "../../public/gift.png";
+import review from "../../public/review_xam.png";
+import waitting_payment from "../../public/waiting_payment.png"
+import delivery from "../../public/delivery.png"
+import waiting from "../../public/waiting.png"
 
 const UserPage = () => {
   // const user = useRecoilValue(userState);
@@ -26,10 +31,10 @@ const UserPage = () => {
         <div
           className="absolute inset-0 bg-customGreen w-full h-1/3"
           style={{
-            top: "-8px",
+            top: "-60px",
             left: "50%",
             transform: "translateX(-50%)",
-            borderRadius: "0 0 33% 33%",
+            // borderRadius: "0 0 33% 33%",
             zIndex: -1,
           }}
         ></div>
@@ -50,9 +55,9 @@ const UserPage = () => {
             </div>
           </div>
           <hr />
-          <div className="p-4 rounded-2xl mb-4 flex justify-between pr-0">
+          <div className="p-4 rounded-2xl mb-2 flex justify-between pr-0">
             <div className="w-8 max-w-full object-cover flex justify-between items-center border-gray-300">
-              <img src={order} alt="gift" />
+              <img src={gift} alt="gift" />
               <div className="whitespace-nowrap text-center ml-2">Ưu đãi</div>
             </div>
             <div className="flex justify-end h-12">
@@ -65,9 +70,12 @@ const UserPage = () => {
         {/* <div className="w-full h-full"></div> */}
       </div>
       <div className=" bg-white">
-        <div className="flex justify-between items-center h-12 border-b-[1px] mr-2 ml-2 pl-4 pr-4" onClick={() => navigate('/about')}>
+        <div
+          className="flex justify-between items-center h-12 border-b-[1px] mr-2 ml-2 pl-4 pr-4"
+          onClick={() => navigate("/about")}
+        >
           <div className="flex">
-            <Icon className="text-green-500 mr-2" icon="zi-setting" />
+            <Icon className="text-green-500 mr-2" icon="zi-edit-text" />
             <div>Chỉnh sửa thông tin</div>
           </div>
           <Icon className="" icon="zi-chevron-right" />
@@ -87,19 +95,31 @@ const UserPage = () => {
 
           <div className="flex justify-between items-center text-gray-500">
             <div className="flex flex-col items-center">
-              <Icon className="text-gray-400 mr-2" icon="zi-setting" />
+              {/* <Icon className="text-gray-400 mr-2" icon="zi-setting" /> */}
+              <div className="w-8 h-8">
+                <img src={waitting_payment} alt="" />
+              </div>
               <div>Chờ thanh toán</div>
             </div>
             <div className="flex flex-col items-center">
-              <Icon className="text-gray-400 mr-2" icon="zi-setting" />
+              {/* <Icon className="text-gray-400 mr-2" icon="zi-setting" /> */}
+              <div className="w-8 h-8">
+                <img src={waiting} alt="" />
+              </div>
               <div>Đang xử lý</div>
             </div>
             <div className="flex flex-col items-center">
-              <Icon className="text-gray-400 mr-2" icon="zi-setting" />
+            <div className="w-8 h-8">
+                <img src={delivery} alt="" />
+              </div>
+              {/* <Icon className="text-gray-400 mr-2" icon="zi-setting" /> */}
               <div>Đang giao</div>
             </div>
             <div className="flex flex-col items-center">
-              <Icon className="text-gray-400 mr-2" icon="zi-setting" />
+              {/* <Icon className="text-gray-400 mr-2" icon="zi-setting" /> */}
+              <div className="w-8 h-8">
+                <img src={review} alt="" />
+              </div>
               <div>Đánh giá</div>
             </div>
           </div>
@@ -107,7 +127,7 @@ const UserPage = () => {
 
         <div className="flex justify-between items-center h-12 border-b-[1px] pl-4 pr-4 mr-2 ml-2 mt-2">
           <div className="flex">
-            <Icon className="text-green-500 mr-2" icon="zi-setting" />
+            <Icon className="text-green-500 mr-2" icon="zi-location" />
             <div>Sổ địa chỉ</div>
           </div>
           <div className="flex">
@@ -152,16 +172,18 @@ const UserPage = () => {
           />
         </div>
         <div className="flex justify-center space-x-12 pb-6 mt-4">
-          <div className="rounded-full shadow-2xl flex flex-row justify-center  h-10 w-32"
-          style={{ boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px' }}
+          <div
+            className="rounded-full shadow-2xl flex flex-row justify-center  h-10 w-32"
+            style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
           >
             <Icon className="mt-2" icon="zi-download" />
             <button>Tải xuống</button>
           </div>
-          <div className="rounded-full shadow-2xl flex flex-row justify-center  h-10 w-32"
-          style={{ boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px' }}
+          <div
+            className="rounded-full shadow-2xl flex flex-row justify-center  h-10 w-32"
+            style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
           >
-            <Icon className="mt-2" icon="zi-download" />
+            <Icon className="mt-2" icon="zi-share" />
             <button>Chia sẻ</button>
           </div>
         </div>

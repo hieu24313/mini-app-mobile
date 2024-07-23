@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import category_json from "../mock_data/category.json";
-import { Box, Header, Icon, Input, Page, Select, Slider, Text } from "zmp-ui";
+import { Box, Header, Icon, Input, Page, Select, Slider, Text, useNavigate } from "zmp-ui";
 import json from "../mock_data/products.json";
 import { useCart } from "../context/CartContext";
 
@@ -10,6 +10,7 @@ const Category = () => {
   const [baseProducts, setBaseProducts] = useState(json);
   const [choiceCategory, setChoiceCategory] = useState("");
   const { addToCart, products: cartProducts } = useCart();
+  const navigate = useNavigate();
 
   const filterProduct = (key) => {
     if (key == choiceCategory) {
@@ -131,6 +132,9 @@ const Category = () => {
                     <div
                       key={p.id}
                       className="shadow-lg bg-white m-0 rounded-lg w-[47%] p-3 ml-2 mb-2"
+                      onClick={() => {
+                        navigate(`/product/${p.id}`)
+                      }}
                     >
                       <img
                         className="h-32 w-full object-cover rounded-lg"
@@ -157,7 +161,7 @@ const Category = () => {
                         <Text className="mt-2">{p.name}</Text>
                         <div className="flex justify-between items-center">
                           <Text className="font-bold mt-2 mb-3">
-                            Giá: {p.price} đ
+                            Giá: {p.price.toLocaleString()} đ
                           </Text>
                           <Icon
                           

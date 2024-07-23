@@ -26,7 +26,7 @@ const AboutPage = (props) => {
   };
 
   return (
-    <Page className="page padding-lr-0">
+    <Page style={{ paddingBottom: "0px" }} className="page padding-lr-0">
       <Header
         backIcon={
           <Icon className="text-white text-lg" icon="zi-chevron-left-header" />
@@ -37,7 +37,7 @@ const AboutPage = (props) => {
       <div className="flex justify-center bg-white w-full">
         <img className="pt-14 w-[25%] pb-6" src={user.avatar} alt={user.name} />
       </div>
-      <div className="bg-white mt-3">
+      <div className="bg-white mt-3 h-4/5">
         <div className="bg-white ml-4">
           <Text.Header>Thông tin cá nhân</Text.Header>
 
@@ -77,36 +77,79 @@ const AboutPage = (props) => {
             /> */}
 
             <DatePicker
-              label="Ngày sinh"
+              label="Chọn ngày"
+              helperText="Vui lòng chọn ngày từ lịch."
+              errorText="Ngày không hợp lệ."
+              status="success"
+              placeholder="Chọn ngày..."
+              title="Chọn ngày sinh"
+              startDate={new Date("2024-01-01")}
+              endDate={new Date("2024-12-31")}
+              startYear={2020}
+              endYear={2025}
+              dateFormat="dd/MM/yyyy"
               columnsFormat="DD-MM-YYYY"
-              defaultValue={new Date(user.dob)}
-              onChange={(args) => change("dob", args.target.value)}
-              // helperText="Helper text"
+              // defaultValue={new Date("2024-06-10")}
+              // value={selectedDate}
+              // onChange={handleDateChange}
+              onVisibilityChange={(isOpen) =>
+                console.log("DatePicker is open:", isOpen)
+              }
               mask
               maskClosable
-              dateFormat="dd/mm/yyyy"
-              title="Ngày sinh"
+              action={{
+                text: "Xong",
+                close: true,
+                onClick: () => console.log("Action button clicked"),
+              }}
+              inputClass="custom-input-class"
+              // prefix={<span>📅</span>}
+              // suffix={<span>▼</span>}
+              locale="vi-VN"
             />
           </div>
-          {/* <div className="flex justify-around mt-4 mb-4">
-            <Radio name="gender" value="Male" label="Nam" />
-            <Radio name="gender" value="Female" label="Nữ" />
-            <Radio name="gender" value="Other" label="Khác" />
-          </div> */}
-          <div className="flex mt-4 mb-4">
-            <Radio.Group className="flex ">
-              <Radio name="gender" value="Male" label="Nam" />
-              <Radio name="gender" value="Female" label="Nữ" />
-              <Radio name="gender" value="Other" label="Khác" />
+          <div className="mt-4">
+            <label htmlFor="gender">Giới tính</label>
+          </div>
+
+          <div
+            name="gender"
+            id="gender"
+            className="flex mt-2 mb-4 items-center justify-between"
+          >
+            <Radio.Group vlaue={user.gender} className="flex ">
+              <Radio checked name="gender" value="Male" label="Nam" />
+              <Radio
+                // checked={user.gender == "Female" ? true : false}
+                name="gender"
+                value="Female"
+                label="Nữ"
+              />
+              <Radio
+                // checked={user.gender == "Other" ? true : false}
+                name="gender"
+                value="Other"
+                label="Khác"
+              />
             </Radio.Group>
           </div>
         </div>
+        <div className="bg-white  w-full flex items-center justify-center mt-8">
+          <button
+          onClick={() => navigate('/user')}
+          className="rounded-xl h-12 bottom-0 bg-customGreen text-white w-4/5 text-center mb-4 flex items-center justify-center">
+            Lưu
+          </button>
+        </div>
       </div>
-      <div className="w-full h-20 fixed bottom-0 bg-white border-t-[1px] shadow-md">
-        <button className="bg-customGreen w-full h-14 mr-3 ml-3 rounded-sm">
+      {/* <div className="w-full h-20 fixed flex bottom-0 bg-white border-t-[1px] shadow-md"> */}
+      {/* <button className="bg-customGreen w-full h-14 pr-3 pl-3 rounded-sm">
+          Lưu
+        </button> */}
+      {/* <button className="bg-customGreen w-full h-14 pr-3 pl-3 rounded-sm">
           Lưu
         </button>
-      </div>
+      </div> */}
     </Page>
   );
 };

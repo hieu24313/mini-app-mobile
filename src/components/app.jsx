@@ -10,6 +10,7 @@ import { CartProvider } from "../context/CartContext";
 import CartDetail from "../pages/cart";
 import UserPage from "../pages/user";
 import AboutPage from "../pages/about";
+import ProductDetail from "./product-detail";
 
 const MyApp = () => {
 
@@ -26,6 +27,7 @@ const MyApp = () => {
                 <Route path="/cart" element={<CartDetail />} />
                 <Route path="/user" element={<UserPage />} />
                 <Route path="/about" element={<AboutPage />} />
+                <Route path="/product/:id" element={<ProductDetail />} />
               </AnimationRoutes>
               <Footer />
             </ZMPRouter>

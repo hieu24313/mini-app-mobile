@@ -12,9 +12,14 @@ import "../css/tailwind.css";
 import UserCard from "../components/user-card";
 import { useAuth } from "../context/AuthContext";
 import order from "../../public/order_icon.jpg";
-import cart from "../../public/shopping-cart.png";
+import ProductDetail from "../components/product-detail"
 import json from "../mock_data/products.json";
 import { useCart } from "../context/CartContext";
+import phone from "../../public/phone.png"
+import cart from "../../public/cart.png"
+import gift from "../../public/gift.png"
+import notification from "../../public/notification.png"
+import banner from "../../public/img_banner.jpg"
 
 const HomePage = () => {
   const { user } = useAuth();
@@ -46,11 +51,12 @@ const HomePage = () => {
           zIndex: -1,
         }}
       ></div>
+      <div className="" >
       <div className="section-container">
         <UserCard user={user} />
       </div>
       <div
-        className="bg-white rounded-2xl"
+        className="bg-white rounded-2xl mr-2"
         style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
       >
         <div className="flex justify-between h-12">
@@ -65,20 +71,20 @@ const HomePage = () => {
         <hr />
         <div className="section-container">
           <div className="flex justify-between items-center border-gray-300">
-            <a href="/about" className="flex flex-col items-center w-20">
-              <img className="icon w-12 h-12" src={order} alt="icon" />
+            <a href="/" className="flex flex-col items-center w-20">
+              <img className="icon w-12 h-12" src={cart} alt="icon" />
               <div className="mt-2">Đặt hàng</div>
             </a>
-            <a href="/user" className="flex flex-col items-center w-20">
-              <img className="icon w-12 h-12" src={order} alt="icon" />
+            <a href="/" className="flex flex-col items-center w-20">
+              <img className="icon w-12 h-12" src={gift} alt="icon" />
               <div className="mt-1">Ưu đãi</div>
             </a>
-            <a href="/user" className="flex flex-col items-center w-20">
-              <img className="icon w-12 h-12" src={order} alt="icon" />
-              <div className="mt-1">Thông tin</div>
+            <a href="/" className="flex flex-col items-center w-20">
+              <img className="icon w-12 h-12" src={notification} alt="icon" />
+              <div className="mt-1">Thông báo</div>
             </a>
-            <a href="/user" className="flex flex-col items-center w-20">
-              <img className="icon w-12 h-12" src={order} alt="icon" />
+            <a href="/" className="flex flex-col items-center w-20">
+              <img className="icon w-12 h-12" src={phone} alt="icon" />
               <div className="mt-1">Liên hệ</div>
             </a>
           </div>
@@ -89,10 +95,16 @@ const HomePage = () => {
         <div className="relative flex overflow-x-auto whitespace-nowrap scroll-container mt-2 right-0 ">
           {products.length > 0 ? (
             products.map((p) => (
-              <div key={p.id} className="shadow-lg bg-white mr-3 rounded-lg">
+              <div 
+              key={p.id} 
+              className="shadow-lg bg-white mr-3 rounded-lg"
+              onClick={() => {
+                navigate(`/product/${p.id}`)
+              }}
+              >
                 <div
                   key={p.id}
-                  className="flex bg-white rounded-lg w-48 p-4 mr-4"
+                  className="flex bg-white rounded-lg w-48 p-1"
                 >
                   <img
                     className="h-32 w-full object-cover rounded-lg"
@@ -104,7 +116,7 @@ const HomePage = () => {
                   <Text className="mt-2 ml-4">{p.name}</Text>
                   <div className="flex justify-between items-center">
                     <Text className="font-bold ml-4 mt-2 mb-3">
-                      Giá: {p.price} đ
+                      Giá: {p.price.toLocaleString()} đ
                     </Text>
                     <Icon
                       icon="zi-add-story"
@@ -126,10 +138,15 @@ const HomePage = () => {
         <div className="relative flex overflow-x-auto whitespace-nowrap scroll-container mt-2 right-0 ">
           {productsHot.length > 0 ? (
             productsHot.map((p) => (
-              <div key={p.id} className="shadow-lg bg-white mr-3 rounded-lg">
+              <div 
+              key={p.id} 
+              className="shadow-lg bg-white mr-3 rounded-lg" 
+              onClick={() => {
+                navigate(`/product/${p.id}`)
+              }}>
                 <div
                   key={p.id}
-                  className="flex bg-white rounded-lg w-48 p-4 mr-4"
+                  className="flex bg-white rounded-lg w-48 p-1"
                 >
                   <img
                     className="h-32 w-full object-cover rounded-lg"
@@ -141,7 +158,7 @@ const HomePage = () => {
                   <Text className="mt-2 ml-4">{p.name}</Text>
                   <div className="flex justify-between items-center">
                     <Text className="font-bold ml-4 mt-2 mb-3">
-                      Giá: {p.price} đ
+                      Giá: {p.price.toLocaleString()} đ
                     </Text>
                     <Icon
                       icon="zi-add-story"
@@ -199,7 +216,7 @@ const HomePage = () => {
         <div className="flex flex-col">
           <div className="relative flex overflow-x-auto whitespace-nowrap scroll-container mt-2 right-0 ">
             <div className="shadow-lg bg-white mr-3 rounded-lg">
-              <div className="flex bg-white rounded-lg w-48 p-4 mr-4">
+              <div className="flex bg-white rounded-lg w-48 p-1">
                 <img
                   className="h-32 w-full object-cover rounded-lg"
                   src={products[4].photo_url}
@@ -214,16 +231,16 @@ const HomePage = () => {
               </div>
             </div>
             <div className="shadow-lg bg-white mr-3 rounded-lg">
-              <div className="flex bg-white rounded-lg w-48 p-4 mr-4">
+              <div className="flex bg-white rounded-lg w-48 p-1">
                 <img
                   className="h-32 w-full object-cover rounded-lg"
-                  src={products[5].photo_url}
+                  src={banner}
                   alt=""
                 />
               </div>
               <div className="w-[180px]">
                 <Text className="mt-2 ml-4 font-bold truncate">
-                  8 ĐIỀU VỀ AMINO AXIT ĐỐI VỚI CÂY TRỒNG, BẠN CẦN...
+                Kỹ Thuật Trồng Rau Và Cách Chăm Sóc Rau Sạch Nhanh Tốt
                 </Text>
                 <Text className="ml-4 mt-2 mb-3 text-[15px]">10:22, 22/07</Text>
               </div>
@@ -231,37 +248,38 @@ const HomePage = () => {
           </div>
           <div className="relative flex overflow-x-auto whitespace-nowrap scroll-container mt-2 right-0 ">
             <div className="shadow-lg bg-white mr-3 rounded-lg">
-              <div className="flex bg-white rounded-lg w-48 p-4 mr-4">
+              <div className="flex bg-white rounded-lg w-48 p-1">
                 <img
                   className="h-32 w-full object-cover rounded-lg"
-                  src={products[4].photo_url}
+                  src="https://xuannong.vn/images/ky-thuat-trong-cay-an-qua.jpg"
                   alt=""
                 />
               </div>
               <div className="w-[180px]">
                 <Text className="mt-2 ml-4 font-bold truncate">
-                  8 ĐIỀU VỀ AMINO AXIT ĐỐI VỚI CÂY TRỒNG, BẠN CẦN...
+                Kỹ thuật trồng cây ăn quả an toàn và hiệu quả
                 </Text>
                 <Text className="ml-4 mt-2 mb-3 text-[15px]">10:22, 22/07</Text>
               </div>
             </div>
             <div className="shadow-lg bg-white mr-3 rounded-lg">
-              <div className="flex bg-white rounded-lg w-48 p-4 mr-4">
+              <div className="flex bg-white rounded-lg w-48 p-1">
                 <img
                   className="h-32 w-full object-cover rounded-lg"
-                  src={products[5].photo_url}
-                  alt=""
+                  src="https://vinamacca.com.vn/wp-content/uploads/2023/12/ky-thuat-trong-cay-mac-ca-2.jpg"
+                  alt="Quy trình kỹ thuật trồng và chăm sóc vườn cây macca - vinamacca"
                 />
               </div>
               <div className="w-[180px]">
                 <Text className="mt-2 ml-4 font-bold truncate">
-                  8 ĐIỀU VỀ AMINO AXIT ĐỐI VỚI CÂY TRỒNG, BẠN CẦN...
+                Quy trình kỹ thuật trồng và chăm sóc vườn cây macca - vinamacca
                 </Text>
                 <Text className="ml-4 mt-2 mb-3 text-[15px]">10:22, 22/07</Text>
               </div>
             </div>
           </div>
         </div>
+      </div>
       </div>
     </Page>
   );

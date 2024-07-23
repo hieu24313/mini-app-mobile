@@ -8,7 +8,7 @@ export const userState = atom({
     avatar: 'ZA',
     phone_number: "0123456789",
     email: "ZA@ZA.zalo",
-    dob: "22/06/2002",
+    dob: "2002-06-22",
     gender: "Male"
   }
 })

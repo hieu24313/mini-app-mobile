@@ -13,6 +13,7 @@ import {
 } from "zmp-ui";
 import { useCart } from "../context/CartContext";
 import { useLocation } from "react-router-dom";
+import shopingcart from "../../public/shopping_cart.png"
 
 const Footer = (props) => {
   const navigate = useNavigate();
@@ -24,6 +25,19 @@ const Footer = (props) => {
   const [deleteProTemp, setDeleteProTemp] = useState(null);
   const location = useLocation();
   const showFooter = location.pathname !== "/about";
+
+  const CartIcon = () => {
+    return (
+      <div className="relative inline-block">
+            <img src={shopingcart} alt="cart" className="w-8 h-8" />
+            {count > 0 && (
+                <div className="absolute top-0 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                    {count}
+                </div>
+            )}
+        </div>
+  );
+  }
   return (
     <>
       {showFooter ? (
@@ -51,7 +65,8 @@ const Footer = (props) => {
             <BottomNavigation.Item
               label="Giỏ hàng"
               key="cart"
-              icon={<Icon icon="zi-more-grid" />}
+              icon={<CartIcon />}
+              // icon={<Icon icon="zi-more-grid" />}
               activeIcon={<Icon icon="zi-more-grid" />}
               onClick={() => setSheetVisible(true)}
               // linkTo="/cart"
