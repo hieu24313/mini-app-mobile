@@ -9,7 +9,6 @@ import {
   Icon,
   useNavigate,
 } from "zmp-ui";
-import order from "../../public/order_icon.jpg";
 import { useRecoilValue } from "recoil";
 import { userState } from "../state";
 import UserCard from "../components/user-card";
@@ -50,7 +49,7 @@ const UserPage = () => {
               Member
             </div>
             <div className="flex justify-end h-12">
-              <span className="mt-4">0 </span>
+              <span className="mt-4">0</span>
               <Icon className="mt-4 mr-6" icon="zi-chevron-right" />
             </div>
           </div>
@@ -61,7 +60,6 @@ const UserPage = () => {
               <div className="whitespace-nowrap text-center ml-2">Ưu đãi</div>
             </div>
             <div className="flex justify-end h-12">
-              {/* <span className="mt-4">50,000 đ</span> */}
               <Icon className="mt-4 mr-6" icon="zi-chevron-right" />
             </div>
           </div>
@@ -95,14 +93,12 @@ const UserPage = () => {
 
           <div className="flex justify-between items-center text-gray-500">
             <div className="flex flex-col items-center">
-              {/* <Icon className="text-gray-400 mr-2" icon="zi-setting" /> */}
               <div className="w-8 h-8">
                 <img src={waitting_payment} alt="" />
               </div>
               <div>Chờ thanh toán</div>
             </div>
             <div className="flex flex-col items-center">
-              {/* <Icon className="text-gray-400 mr-2" icon="zi-setting" /> */}
               <div className="w-8 h-8">
                 <img src={waiting} alt="" />
               </div>
@@ -112,11 +108,9 @@ const UserPage = () => {
             <div className="w-8 h-8">
                 <img src={delivery} alt="" />
               </div>
-              {/* <Icon className="text-gray-400 mr-2" icon="zi-setting" /> */}
               <div>Đang giao</div>
             </div>
             <div className="flex flex-col items-center">
-              {/* <Icon className="text-gray-400 mr-2" icon="zi-setting" /> */}
               <div className="w-8 h-8">
                 <img src={review} alt="" />
               </div>

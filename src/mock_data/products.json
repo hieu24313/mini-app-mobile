@@ -1,107 +1,119 @@
 [
-    {
-      "name": "Chuối Nam Mỹ",
-      "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/228923/bhx/chuoi-gia-giong-nam-my-trai-tu-120-220g-202407121459178144.jpg",
-      "quantity": "Hot",
-      "id": 2,
-      "price": 30000,
-      "category": "fruit"
-    },
-    {
-      "name": "Ớt chuông",
-      "photo_url": "https://www.nicepng.com/png/detail/52-525615_green-bell-pepper-png-green-capsicum-png.png",
-      "quantity": "Hot",
-      "id": 7,
-      "price": 5000,
-      "category": "Vegetable"
-    },
-    {
-      "name": "Ổi Đài Loan",
-      "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/226918/bhx/oi-dai-loan-trai-tu-220g-tro-len-202407121459272113.jpg",
-      "quantity": "Hot",
-      "id": 10,
-      "price": 20000,
-      "category": "fruit"
-    },
-    {
-      "name": "Dưa hấu",
-      "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/226966/bhx/dua-hau-khong-hat-trai-tu-2-kg-tro-len-202407121500558977.jpg",
-      "quantity": "Hot",
-      "id": 11,
-      "price": 20000,
-      "category": "Hot"
-    },
-    {
-      "name": "Cà chua",
-      "photo_url": "https://www.freepngimg.com/thumb/categories/2985.png",
-      "quantity": "Hot",
-      "id": 13,
-      "price": 5000,
-      "category": "Vegetable"
-    },
-    {
-      "name": "Táo New Zealand",
-      "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/294908/bhx/thung-tao-gala-mini-new-zealand-175kg-202407081518474836.jpg",
-      "quantity": "One Bunch",
-      "id": 16,
-      "price": 5000,
-      "category": "Hot"
-    },
-    {
-      "name": "Cam sành",
-      "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/321604/bhx/cam-sanh-trai-tu-130g-tro-len-202406061427246531_300x300.jpg",
-      "quantity": "One Kg",
-      "id": 18,
-      "price": 60000,
-      "category": "fruit"
-    },
-    {
-      "name": "Khoai tây",
-      "photo_url": "https://www.freepngimg.com/thumb/potato/7-potato-png-images-pictures-download-thumb.png",
-      "quantity": "One container",
-      "id": 20,
-      "price": 80000,
-      "category": "Vegetable"
-    },
-    {
-      "name": "Ớt",
-      "photo_url": "https://www.freepngimg.com/thumb/categories/2981.png",
-      "quantity": "Hot",
-      "id": 21,
-      "price": 15000,
-      "category": "Vegetable"
-    },
-    {
-      "name": "Mít Thái",
-      "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/314554/bhx/mit-thai-xe-mieng-202403291353209564_300x300.jpg",
-      "quantity": "One Bunch",
-      "id": 22,
-      "price": 20000,
-      "category": "fruit"
-    },
-    {
-      "name": "Xoài tứ quý",
-      "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/234063/bhx/xoai-tu-quy-trai-tu-400g-tro-len-202406061429235173_300x300.jpg",
-      "quantity": "Hot",
-      "id": 23,
-      "price": 25000,
-      "category": "fruit"
-    },
-    {
-      "name": "Cóc lớn",
-      "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/228876/bhx/coc-lon-trai-tu-160g-tro-len-202406061429405478_300x300.jpg",
-      "quantity": "Hot",
-      "id": 24,
-      "price": 30000,
-      "category": "fruit"
-    },
-    {
-      "name": "Thanh long",
-      "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/234065/bhx/thanh-long-ruot-do-trai-tu-300g-tro-len-202407121501279431.jpg",
-      "quantity": "One Kg",
-      "id": 25,
-      "price": 40000,
-      "category": "fruit"
-    }
-  ]
-  
+  {
+    "name": "Ớt chuông",
+    "photo_url": "https://www.nicepng.com/png/detail/52-525615_green-bell-pepper-png-green-capsicum-png.png",
+    "quantity": "Hot",
+    "id": 7,
+    "price": 5000,
+    "category": "Vegetable",
+    "description": "Ớt chuông xanh là một loại rau củ giòn và ngọt, chứa nhiều vitamin A và C. Nó không chỉ giúp tăng cường hệ miễn dịch mà còn có lợi cho mắt và làn da. Ớt chuông xanh thích hợp cho các món xào, salad hoặc dùng làm gia vị trong nhiều món ăn."
+  },
+  {
+    "name": "Ổi Đài Loan",
+    "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/226918/bhx/oi-dai-loan-trai-tu-220g-tro-len-202407121459272113.jpg",
+    "quantity": "Hot",
+    "id": 10,
+    "price": 20000,
+    "category": "fruit",
+    "description": "Ổi Đài Loan nổi bật với vị ngọt thanh và hương thơm đặc trưng. Nó cung cấp một lượng lớn vitamin C, chất xơ và các chất chống oxy hóa. Đây là lựa chọn lý tưởng để bổ sung vào chế độ ăn uống hàng ngày, có thể ăn trực tiếp hoặc dùng để làm nước ép."
+  },
+  {
+    "name": "Dưa hấu",
+    "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/226966/bhx/dua-hau-khong-hat-trai-tu-2-kg-tro-len-202407121500558977.jpg",
+    "quantity": "Hot",
+    "id": 11,
+    "price": 20000,
+    "category": "Hot",
+    "description": "Dưa hấu là loại trái cây lý tưởng cho mùa hè với vị ngọt mát và lượng nước cao. Nó chứa nhiều vitamin A, C và lycopene, có lợi cho sức khỏe tim mạch và làn da. Dưa hấu cũng giúp duy trì sự hydrat hóa cơ thể, rất thích hợp để ăn trực tiếp hoặc làm nước ép giải khát."
+  },
+  {
+    "name": "Cà chua",
+    "photo_url": "https://www.freepngimg.com/thumb/categories/2985.png",
+    "quantity": "Hot",
+    "id": 13,
+    "price": 5000,
+    "category": "Vegetable",
+    "description": "Cà chua là một loại rau củ phổ biến, không chỉ làm tăng hương vị cho món ăn mà còn cung cấp nhiều vitamin và khoáng chất. Chứa nhiều lycopene, cà chua có khả năng chống oxy hóa mạnh mẽ, giúp bảo vệ cơ thể khỏi các bệnh tật và cải thiện sức khỏe tổng thể."
+  },
+  {
+    "name": "Táo New Zealand",
+    "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/294908/bhx/thung-tao-gala-mini-new-zealand-175kg-202407081518474836.jpg",
+    "quantity": "One Bunch",
+    "id": 16,
+    "price": 5000,
+    "category": "Hot",
+    "description": "Táo New Zealand có vị ngọt thanh và giòn, là lựa chọn tuyệt vời cho bữa ăn nhẹ hoặc tráng miệng. Táo chứa nhiều chất xơ và vitamin C, giúp duy trì sức khỏe tim mạch và hỗ trợ hệ tiêu hóa. Nó cũng có khả năng chống viêm và chống lão hóa."
+  },
+  {
+    "name": "Chuối Nam Mỹ",
+    "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/228923/bhx/chuoi-gia-giong-nam-my-trai-tu-120-220g-202407121459178144.jpg",
+    "quantity": "Hot",
+    "id": 2,
+    "price": 30000,
+    "category": "fruit",
+    "description": "Chuối Nam Mỹ là loại chuối nổi tiếng với hương vị ngọt ngào và thơm mát. Đây là nguồn cung cấp dồi dào vitamin B6, vitamin C và kali, rất tốt cho hệ tiêu hóa và giúp cải thiện sức khỏe tim mạch. Thích hợp để ăn trực tiếp hoặc dùng trong các món sinh tố, bánh ngọt."
+  },
+  {
+    "name": "Cam sành",
+    "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/321604/bhx/cam-sanh-trai-tu-130g-tro-len-202406061427246531_300x300.jpg",
+    "quantity": "One Kg",
+    "id": 18,
+    "price": 60000,
+    "category": "fruit",
+    "description": "Cam sành cung cấp một lượng lớn vitamin C và chất xơ, giúp tăng cường hệ miễn dịch và duy trì sức khỏe làn da. Vị ngọt và chua nhẹ của cam sành làm cho nó trở thành lựa chọn lý tưởng cho nước cam tươi, salad và các món tráng miệng."
+  },
+  {
+    "name": "Khoai tây",
+    "photo_url": "https://www.freepngimg.com/thumb/potato/7-potato-png-images-pictures-download-thumb.png",
+    "quantity": "One container",
+    "id": 20,
+    "price": 80000,
+    "category": "Vegetable",
+    "description": "Khoai tây là nguồn cung cấp carbohydrate tốt và nhiều vitamin B6, vitamin C. Nó rất linh hoạt trong chế biến, có thể dùng để làm khoai tây chiên, nghiền hoặc nướng. Khoai tây cũng có tác dụng cung cấp năng lượng lâu dài và hỗ trợ tiêu hóa."
+  },
+  {
+    "name": "Ớt",
+    "photo_url": "https://www.freepngimg.com/thumb/categories/2981.png",
+    "quantity": "Hot",
+    "id": 21,
+    "price": 15000,
+    "category": "Vegetable",
+    "description": "Ớt cay có khả năng làm tăng hương vị cho món ăn và cung cấp nhiều vitamin C, A. Nó cũng chứa capsaicin, một hợp chất có lợi cho sức khỏe giúp tăng cường trao đổi chất và giảm cảm giác thèm ăn. Ớt có thể được sử dụng trong nhiều món ăn từ các món xào đến các món súp."
+  },
+  {
+    "name": "Mít Thái",
+    "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/314554/bhx/mit-thai-xe-mieng-202403291353209564_300x300.jpg",
+    "quantity": "One Bunch",
+    "id": 22,
+    "price": 20000,
+    "category": "fruit",
+    "description": "Mít Thái có vị ngọt đậm và mùi thơm dễ chịu. Đây là một loại trái cây nhiệt đới chứa nhiều vitamin C, chất xơ và các khoáng chất như kali và magiê. Mít Thái có thể ăn trực tiếp hoặc chế biến thành các món tráng miệng, sinh tố và món ăn vặt."
+  },
+  {
+    "name": "Thanh long",
+    "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/234065/bhx/thanh-long-ruot-do-trai-tu-300g-tro-len-202407121501279431.jpg",
+    "quantity": "One Kg",
+    "id": 25,
+    "price": 40000,
+    "category": "fruit",
+    "description": "Thanh long là trái cây nhiệt đới với vị ngọt nhẹ và kết cấu giòn, cung cấp nhiều vitamin C, chất xơ và các khoáng chất. Nó không chỉ ngon mà còn bổ dưỡng, hỗ trợ tiêu hóa và giúp cải thiện sức khỏe làn da. Thích hợp để ăn trực tiếp hoặc dùng trong các món salad và sinh tố."
+  },
+  {
+    "name": "Xoài tứ quý",
+    "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/234063/bhx/xoai-tu-quy-trai-tu-400g-tro-len-202406061429235173_300x300.jpg",
+    "quantity": "Hot",
+    "id": 23,
+    "price": 25000,
+    "category": "fruit",
+    "description": "Xoài tứ quý có vị ngọt thanh và hương thơm đặc trưng, thích hợp cho món tráng miệng và sinh tố. Xoài cung cấp nhiều vitamin A và C, rất tốt cho sức khỏe mắt và tăng cường hệ miễn dịch. Đây là một lựa chọn lý tưởng cho các món tráng miệng mát lạnh và ngon miệng."
+  },
+  {
+    "name": "Cóc lớn",
+    "photo_url": "https://cdn.tgdd.vn/Products/Images/8788/228876/bhx/coc-lon-trai-tu-160g-tro-len-202406061429405478_300x300.jpg",
+    "quantity": "Hot",
+    "id": 24,
+    "price": 30000,
+    "category": "fruit",
+    "description": "Cóc lớn có vị chua ngọt đặc trưng, giúp kích thích tiêu hóa và làm tươi mát khẩu vị. Nó cung cấp nhiều vitamin và chất chống oxy hóa, có lợi cho sức khỏe. Cóc lớn thường được dùng làm món ăn nhẹ hoặc kết hợp trong các món tráng miệng."
+  }
+]
