@@ -1,6 +1,16 @@
 import React, { useState } from "react";
 import category_json from "../mock_data/category.json";
-import { Box, Header, Icon, Input, Page, Select, Slider, Text, useNavigate } from "zmp-ui";
+import {
+  Box,
+  Header,
+  Icon,
+  Input,
+  Page,
+  Select,
+  Slider,
+  Text,
+  useNavigate,
+} from "zmp-ui";
 import json from "../mock_data/products.json";
 import { useCart } from "../context/CartContext";
 
@@ -71,7 +81,13 @@ const Category = () => {
                       className=" w-24 ml-[2px] mr-[2px] h-32"
                       onClick={() => filterProduct(c.key)}
                     >
-                      <div className={choiceCategory == c.key ? "shadow-lg bg-white p-3 rounded-lg mt-1 mb-1 relative h-28 items-center flex flex-col text-customGreen" : "p-3 mt-1 mb-1 relative h-28 items-center flex flex-col"} >
+                      <div
+                        className={
+                          choiceCategory == c.key
+                            ? "shadow-lg bg-white p-3 rounded-lg mt-1 mb-1 relative h-28 items-center flex flex-col text-customGreen"
+                            : "p-3 mt-1 mb-1 relative h-28 items-center flex flex-col"
+                        }
+                      >
                         <img
                           className="h-12 w-12 object-cover rounded-lg"
                           src={c.image}
@@ -100,46 +116,29 @@ const Category = () => {
               )}
             </div>
           </div>
-          <div className="flex bg-white">
-            <div className="h-screen w-1/5 mt-0 bg-white min-h-screen">
-              <div className="ml-1">
-                <div className="mt-2">
-                  <Text.Title size="small">Xếp theo giá</Text.Title>
-                </div>
-                <hr className="bg-black mt-1" />
+              
+              <div className="bg-white border-b-2 border-customGreen">
                 <div>
-                  <div
-                    className="h-8 mt-5 mb-5"
-                    onClick={() => sortProduct("asc")}
-                  >
-                    Thấp đến cao
-                  </div>
-                  <hr className="bg-black" />
-                  <div
-                    className="h-8 mt-5 mb-5"
-                    onClick={() => sortProduct("desc")}
-                  >
-                    Cao đến thấp
-                  </div>
-                  <hr className="bg-black" />
+                  Lọc theo giá
                 </div>
               </div>
-            </div>
-            <div className="h-full w-4/5 mt-0 bg-white border-b mb-[48px]">
+
+          <div className="flex bg-white">
+            <div className="h-full w-full mt-0 bg-white border-b mb-[48px]">
               <div className="flex flex-wrap mt-5">
                 {products.length > 0 ? (
                   products.map((p) => (
                     <div
                       key={p.id}
                       className="shadow-lg bg-white m-0 rounded-lg w-[47%] p-3 ml-2 mb-2"
-                      onClick={() => {
-                        navigate(`/product/${p.id}`)
-                      }}
                     >
                       <img
                         className="h-32 w-full object-cover rounded-lg"
                         src={p.photo_url}
                         alt={p.name}
+                        onClick={() => {
+                          navigate(`/product/${p.id}`);
+                        }}
                       />
 
                       {/* <div>
@@ -158,14 +157,20 @@ const Category = () => {
                 </div> */}
 
                       <div>
-                        <Text className="mt-2">{p.name}</Text>
+                        <Text
+                          className="mt-2"
+                          onClick={() => {
+                            navigate(`/product/${p.id}`);
+                          }}
+                        >
+                          {p.name}
+                        </Text>
                         <div className="flex justify-between items-center">
                           <Text className="font-bold mt-2 mb-3">
                             Giá: {p.price.toLocaleString()} đ
                           </Text>
                           <Icon
-                          
-                            icon="zi-add-story"
+                            icon="zi-plus-circle-solid"
                             onClick={() => addToCart(p)}
                             color="green"
                             className="mr-0 text-green-500 right-0"

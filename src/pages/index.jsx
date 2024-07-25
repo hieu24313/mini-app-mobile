@@ -11,7 +11,6 @@ import {
 import "../css/tailwind.css";
 import UserCard from "../components/user-card";
 import { useAuth } from "../context/AuthContext";
-import ProductDetail from "../components/product-detail";
 import json from "../mock_data/products.json";
 import { useCart } from "../context/CartContext";
 import phone from "../../public/phone.png";
@@ -39,7 +38,10 @@ const HomePage = () => {
   }, []);
 
   return (
-    <Page className="page bg-white" style={{ paddingRight: "0px", paddingLeft: "8px" , zIndex: '-1'}}>
+    <Page
+      className="page bg-white"
+      style={{ paddingRight: "0px", paddingLeft: "8px", zIndex: "-1" }}
+    >
       <div
         className="absolute inset-0 bg-customGreen w-full h-1/3"
         style={{
@@ -90,13 +92,16 @@ const HomePage = () => {
           </div>
         </div>
         <div className="p-4 pr-0 left-0 right-0 pl-0">
-          <Text className="font-bold text-xl">Sản phẩm mới</Text>
+          <div className="flex justify-between">
+            <Text className="font-bold text-xl">Sản phẩm mới</Text>
+            <Text className="text-customGreen mr-2">Xem thêm</Text>
+          </div>
           <div className="relative flex overflow-x-auto whitespace-nowrap scroll-container mt-2 right-0 ">
             {products.length > 0 ? (
               products.map((p) => (
                 <div
                   key={p.id}
-                  className="shadow-lg bg-white mr-3 rounded-lg"
+                  className="shadow-lg bg-white mr-3 rounded-lg border-2"
                   // onClick={() => {
                   //   navigate(`/product/${p.id}`);
                   // }}
@@ -125,7 +130,7 @@ const HomePage = () => {
                         Giá: {p.price.toLocaleString()} đ
                       </Text>
                       <Icon
-                        icon="zi-add-story"
+                        icon="zi-plus-circle-solid"
                         onClick={() => addToCart(p)}
                         color="green"
                         className="mr-3 text-green-500"
@@ -140,11 +145,18 @@ const HomePage = () => {
           </div>
         </div>
         <div className="p-4 pr-0 left-0 right-0 pl-0">
-          <Text className="font-bold text-xl">Sản phẩm bán chạy</Text>
+          <div className="flex justify-between">
+            <Text className="font-bold text-xl">Sản phẩm bán chạy</Text>
+            <Text className="text-customGreen mr-2">Xem thêm</Text>
+          </div>
+
           <div className="relative flex overflow-x-auto whitespace-nowrap scroll-container mt-2 right-0 ">
             {productsHot.length > 0 ? (
               productsHot.map((p) => (
-                <div key={p.id} className="shadow-lg bg-white mr-3 rounded-lg">
+                <div
+                  key={p.id}
+                  className="shadow-lg bg-white mr-3 rounded-lg border-2"
+                >
                   <div key={p.id} className="flex bg-white rounded-lg w-48 p-1">
                     <img
                       className="h-32 w-full object-cover rounded-lg"
@@ -169,7 +181,7 @@ const HomePage = () => {
                         Giá: {p.price.toLocaleString()} đ
                       </Text>
                       <Icon
-                        icon="zi-add-story"
+                        icon="zi-plus-circle-solid"
                         onClick={() => addToCart(p)}
                         color="green"
                         className="mr-3 text-green-500"
@@ -184,9 +196,12 @@ const HomePage = () => {
           </div>
         </div>
         <div className="p-4 pr-0 pl-0">
-          <Text className="font-bold text-xl">Tin tức</Text>
+          <div className="flex justify-between">
+            <Text className="font-bold text-xl">Tin tức</Text>
+            <Text className="text-customGreen mr-2">Xem thêm</Text>
+          </div>
           <div className="relative flex overflow-x-auto whitespace-nowrap scroll-container mt-2 right-0 ">
-            <div className="shadow-lg bg-white mr-3 rounded-lg">
+            <div className="shadow-lg bg-white mr-3 rounded-lg border-2">
               <div className="flex bg-white rounded-lg w-48 p-4 mr-4">
                 <img
                   className="h-32 w-full object-cover rounded-lg"
@@ -224,10 +239,13 @@ const HomePage = () => {
         </div>
 
         <div className="p-4 pr-0 pl-0">
-          <Text className="font-bold text-xl">Kỹ thuật cây trồng</Text>
+          <div className="flex justify-between">
+            <Text className="font-bold text-xl">Kỹ thuật cây trồng</Text>
+            <Text className="text-customGreen mr-2">Xem thêm</Text>
+          </div>
           <div className="flex flex-col">
             <div className="relative flex overflow-x-auto whitespace-nowrap scroll-container mt-2 right-0 ">
-              <div className="shadow-lg bg-white mr-3 rounded-lg">
+              <div className="bg-white mr-3 rounded-lg">
                 <div className="flex bg-white rounded-lg w-48 p-1">
                   <img
                     className="h-32 w-full object-cover rounded-lg"
@@ -244,7 +262,7 @@ const HomePage = () => {
                   </Text>
                 </div>
               </div>
-              <div className="shadow-lg bg-white mr-3 rounded-lg">
+              <div className="bg-white mr-3 rounded-lg">
                 <div className="flex bg-white rounded-lg w-48 p-1">
                   <img
                     className="h-32 w-full object-cover rounded-lg"
@@ -263,7 +281,7 @@ const HomePage = () => {
               </div>
             </div>
             <div className="relative flex overflow-x-auto whitespace-nowrap scroll-container mt-2 right-0 ">
-              <div className="shadow-lg bg-white mr-3 rounded-lg">
+              <div className="bg-white mr-3 rounded-lg">
                 <div className="flex bg-white rounded-lg w-48 p-1">
                   <img
                     className="h-32 w-full object-cover rounded-lg"
@@ -280,7 +298,7 @@ const HomePage = () => {
                   </Text>
                 </div>
               </div>
-              <div className="shadow-lg bg-white mr-3 rounded-lg">
+              <div className=" bg-white mr-3 rounded-lg">
                 <div className="flex bg-white rounded-lg w-48 p-1">
                   <img
                     className="h-32 w-full object-cover rounded-lg"

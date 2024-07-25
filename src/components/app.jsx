@@ -10,7 +10,7 @@ import { CartProvider } from "../context/CartContext";
 import CartDetail from "../pages/cart";
 import UserPage from "../pages/user";
 import AboutPage from "../pages/about";
-import ProductDetail from "./product-detail";
+import ProductDetail from "../pages/product-detail";
 
 const MyApp = () => {
 

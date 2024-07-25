@@ -24,8 +24,15 @@ const Footer = (props) => {
   const [popupVisible, setPopupVisible] = useState(false);
   const [deleteProTemp, setDeleteProTemp] = useState(null);
   const location = useLocation();
-  const showFooter = location.pathname !== "/about";
-
+  let currentPath = location.pathname
+  const [showFooter, setShowFooter] = useState(true);
+  useEffect(() => {
+    if(currentPath == '/about' || currentPath.startsWith("/product/")){
+      setShowFooter(false)
+    }else{
+      setShowFooter(true)
+    }
+  },[currentPath])
   const CartIcon = () => {
     return (
       <div className="relative inline-block">
