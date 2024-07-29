@@ -72,11 +72,11 @@ const HomePage = () => {
           <hr />
           <div className="section-container">
             <div className="flex justify-between items-center border-gray-300">
-              <a href="/" className="flex flex-col items-center w-20">
+              <a onClick={() => navigate("/category")}  className="flex flex-col items-center w-20">
                 <img className="icon w-12 h-12" src={cart} alt="icon" />
                 <div className="mt-2">Đặt hàng</div>
               </a>
-              <a href="/" className="flex flex-col items-center w-20">
+              <a onClick={() => navigate("/discount")} className="flex flex-col items-center w-20">
                 <img className="icon w-12 h-12" src={gift} alt="icon" />
                 <div className="mt-1">Ưu đãi</div>
               </a>

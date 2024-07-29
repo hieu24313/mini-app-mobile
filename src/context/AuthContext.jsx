@@ -10,6 +10,7 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(null);
   const [user, setUser] = useState(useRecoilValue(userState));
+  const [isAuth, setIsAuth] = useState(true);
 
   useEffect(() => {
     // Hàm lấy thông tin người dùng từ Zalo
@@ -20,6 +21,7 @@ export const AuthProvider = ({ children }) => {
             const { userInfo } = data;
             console.log(userInfo);
             resolve(userInfo);
+            setIsAuth(true)
           },
           fail: (error) => {
             console.log(error);
@@ -76,7 +78,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user }}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={{ user, isAuth }}>{children}</AuthContext.Provider>
   );
 };
 

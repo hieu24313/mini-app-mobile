@@ -11,6 +11,7 @@ import CartDetail from "../pages/cart";
 import UserPage from "../pages/user";
 import AboutPage from "../pages/about";
 import ProductDetail from "../pages/product-detail";
+import Discount from "../pages/discount";
 
 const MyApp = () => {
 
@@ -28,6 +29,7 @@ const MyApp = () => {
                 <Route path="/user" element={<UserPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/product/:id" element={<ProductDetail />} />
+                <Route path="/discount" element={<Discount />} />
               </AnimationRoutes>
               <Footer />
             </ZMPRouter>

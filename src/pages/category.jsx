@@ -67,7 +67,7 @@ const Category = () => {
             placeholder="Tìm kiếm sản phẩm"
             onSearch={(text) => searchProduct(text)}
             onChange={(text) => searchProduct(text)}
-            className=""
+            className="rounded-none"
           />
         </div>
         <div className="max-w-full max-h-full">
@@ -78,7 +78,7 @@ const Category = () => {
                   {category.map((c) => (
                     <div
                       key={c.key}
-                      className=" w-24 ml-[2px] mr-[2px] h-32"
+                      className=" w-24 ml-[2px] mr-[2px] h-30"
                       onClick={() => filterProduct(c.key)}
                     >
                       <div
@@ -116,12 +116,16 @@ const Category = () => {
               )}
             </div>
           </div>
-              
-              <div className="bg-white border-b-2 border-customGreen">
-                <div>
-                  Lọc theo giá
-                </div>
-              </div>
+
+          <div className="bg-white border-b-2 border-customGreen">
+            <div className="p-3">
+              <Text className="text-lg font-bold">Lọc theo giá</Text>
+              {/* <div className="flex justify-evenly mt-2">
+                <button className="">Từ cao đến thấp</button>
+                <button>Từ thấp đến cao</button>
+              </div> */}
+            </div>
+          </div>
 
           <div className="flex bg-white">
             <div className="h-full w-full mt-0 bg-white border-b mb-[48px]">

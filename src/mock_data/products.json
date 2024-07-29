@@ -6,7 +6,9 @@
     "id": 7,
     "price": 5000,
     "category": "Vegetable",
-    "description": "Ớt chuông xanh là một loại rau củ giòn và ngọt, chứa nhiều vitamin A và C. Nó không chỉ giúp tăng cường hệ miễn dịch mà còn có lợi cho mắt và làn da. Ớt chuông xanh thích hợp cho các món xào, salad hoặc dùng làm gia vị trong nhiều món ăn."
+    "description": "Ớt chuông xanh là một loại rau củ giòn và ngọt, chứa nhiều vitamin A và C. Nó không chỉ giúp tăng cường hệ miễn dịch mà còn có lợi cho mắt và làn da. Ớt chuông xanh thích hợp cho các món xào, salad hoặc dùng làm gia vị trong nhiều món ăn.",
+    "unit": "quả",
+    "uses": "Tăng cường hệ miễn dịch, tốt cho mắt và làn da, dùng trong các món xào, salad, gia vị."
   },
   {
     "name": "Ổi Đài Loan",
@@ -15,7 +17,9 @@
     "id": 10,
     "price": 20000,
     "category": "fruit",
-    "description": "Ổi Đài Loan nổi bật với vị ngọt thanh và hương thơm đặc trưng. Nó cung cấp một lượng lớn vitamin C, chất xơ và các chất chống oxy hóa. Đây là lựa chọn lý tưởng để bổ sung vào chế độ ăn uống hàng ngày, có thể ăn trực tiếp hoặc dùng để làm nước ép."
+    "description": "Ổi Đài Loan nổi bật với vị ngọt thanh và hương thơm đặc trưng. Nó cung cấp một lượng lớn vitamin C, chất xơ và các chất chống oxy hóa. Đây là lựa chọn lý tưởng để bổ sung vào chế độ ăn uống hàng ngày, có thể ăn trực tiếp hoặc dùng để làm nước ép.",
+    "unit": "quả",
+    "uses": "Bổ sung vitamin C, chất xơ, chống oxy hóa, ăn trực tiếp hoặc làm nước ép."
   },
   {
     "name": "Dưa hấu",
@@ -24,7 +28,9 @@
     "id": 11,
     "price": 20000,
     "category": "Hot",
-    "description": "Dưa hấu là loại trái cây lý tưởng cho mùa hè với vị ngọt mát và lượng nước cao. Nó chứa nhiều vitamin A, C và lycopene, có lợi cho sức khỏe tim mạch và làn da. Dưa hấu cũng giúp duy trì sự hydrat hóa cơ thể, rất thích hợp để ăn trực tiếp hoặc làm nước ép giải khát."
+    "description": "Dưa hấu là loại trái cây lý tưởng cho mùa hè với vị ngọt mát và lượng nước cao. Nó chứa nhiều vitamin A, C và lycopene, có lợi cho sức khỏe tim mạch và làn da. Dưa hấu cũng giúp duy trì sự hydrat hóa cơ thể, rất thích hợp để ăn trực tiếp hoặc làm nước ép giải khát.",
+    "unit": "quả",
+    "uses": "Duy trì sự hydrat hóa, tốt cho sức khỏe tim mạch và làn da, ăn trực tiếp hoặc làm nước ép."
   },
   {
     "name": "Cà chua",
@@ -33,7 +39,9 @@
     "id": 13,
     "price": 5000,
     "category": "Vegetable",
-    "description": "Cà chua là một loại rau củ phổ biến, không chỉ làm tăng hương vị cho món ăn mà còn cung cấp nhiều vitamin và khoáng chất. Chứa nhiều lycopene, cà chua có khả năng chống oxy hóa mạnh mẽ, giúp bảo vệ cơ thể khỏi các bệnh tật và cải thiện sức khỏe tổng thể."
+    "description": "Cà chua là một loại rau củ phổ biến, không chỉ làm tăng hương vị cho món ăn mà còn cung cấp nhiều vitamin và khoáng chất. Chứa nhiều lycopene, cà chua có khả năng chống oxy hóa mạnh mẽ, giúp bảo vệ cơ thể khỏi các bệnh tật và cải thiện sức khỏe tổng thể.",
+    "unit": "quả",
+    "uses": "Cung cấp vitamin và khoáng chất, chống oxy hóa, bảo vệ sức khỏe tổng thể."
   },
   {
     "name": "Táo New Zealand",
@@ -42,7 +50,9 @@
     "id": 16,
     "price": 5000,
     "category": "Hot",
-    "description": "Táo New Zealand có vị ngọt thanh và giòn, là lựa chọn tuyệt vời cho bữa ăn nhẹ hoặc tráng miệng. Táo chứa nhiều chất xơ và vitamin C, giúp duy trì sức khỏe tim mạch và hỗ trợ hệ tiêu hóa. Nó cũng có khả năng chống viêm và chống lão hóa."
+    "description": "Táo New Zealand có vị ngọt thanh và giòn, là lựa chọn tuyệt vời cho bữa ăn nhẹ hoặc tráng miệng. Táo chứa nhiều chất xơ và vitamin C, giúp duy trì sức khỏe tim mạch và hỗ trợ hệ tiêu hóa. Nó cũng có khả năng chống viêm và chống lão hóa.",
+    "unit": "quả",
+    "uses": "Tốt cho sức khỏe tim mạch, hỗ trợ tiêu hóa, chống viêm và lão hóa."
   },
   {
     "name": "Chuối Nam Mỹ",
@@ -51,7 +61,9 @@
     "id": 2,
     "price": 30000,
     "category": "fruit",
-    "description": "Chuối Nam Mỹ là loại chuối nổi tiếng với hương vị ngọt ngào và thơm mát. Đây là nguồn cung cấp dồi dào vitamin B6, vitamin C và kali, rất tốt cho hệ tiêu hóa và giúp cải thiện sức khỏe tim mạch. Thích hợp để ăn trực tiếp hoặc dùng trong các món sinh tố, bánh ngọt."
+    "description": "Chuối Nam Mỹ là loại chuối nổi tiếng với hương vị ngọt ngào và thơm mát. Đây là nguồn cung cấp dồi dào vitamin B6, vitamin C và kali, rất tốt cho hệ tiêu hóa và giúp cải thiện sức khỏe tim mạch. Thích hợp để ăn trực tiếp hoặc dùng trong các món sinh tố, bánh ngọt.",
+    "unit": "quả",
+    "uses": "Cung cấp vitamin B6, vitamin C và kali, tốt cho hệ tiêu hóa và sức khỏe tim mạch."
   },
   {
     "name": "Cam sành",
@@ -60,7 +72,9 @@
     "id": 18,
     "price": 60000,
     "category": "fruit",
-    "description": "Cam sành cung cấp một lượng lớn vitamin C và chất xơ, giúp tăng cường hệ miễn dịch và duy trì sức khỏe làn da. Vị ngọt và chua nhẹ của cam sành làm cho nó trở thành lựa chọn lý tưởng cho nước cam tươi, salad và các món tráng miệng."
+    "description": "Cam sành cung cấp một lượng lớn vitamin C và chất xơ, giúp tăng cường hệ miễn dịch và duy trì sức khỏe làn da. Vị ngọt và chua nhẹ của cam sành làm cho nó trở thành lựa chọn lý tưởng cho nước cam tươi, salad và các món tráng miệng.",
+    "unit": "kg",
+    "uses": "Tăng cường hệ miễn dịch, tốt cho làn da, dùng cho nước cam tươi, salad và tráng miệng."
   },
   {
     "name": "Khoai tây",
@@ -69,7 +83,9 @@
     "id": 20,
     "price": 80000,
     "category": "Vegetable",
-    "description": "Khoai tây là nguồn cung cấp carbohydrate tốt và nhiều vitamin B6, vitamin C. Nó rất linh hoạt trong chế biến, có thể dùng để làm khoai tây chiên, nghiền hoặc nướng. Khoai tây cũng có tác dụng cung cấp năng lượng lâu dài và hỗ trợ tiêu hóa."
+    "description": "Khoai tây là nguồn cung cấp carbohydrate tốt và nhiều vitamin B6, vitamin C. Nó rất linh hoạt trong chế biến, có thể dùng để làm khoai tây chiên, nghiền hoặc nướng. Khoai tây cũng có tác dụng cung cấp năng lượng lâu dài và hỗ trợ tiêu hóa.",
+    "unit": "bao",
+    "uses": "Cung cấp carbohydrate và vitamin, linh hoạt trong chế biến, hỗ trợ tiêu hóa."
   },
   {
     "name": "Ớt",
@@ -78,7 +94,9 @@
     "id": 21,
     "price": 15000,
     "category": "Vegetable",
-    "description": "Ớt cay có khả năng làm tăng hương vị cho món ăn và cung cấp nhiều vitamin C, A. Nó cũng chứa capsaicin, một hợp chất có lợi cho sức khỏe giúp tăng cường trao đổi chất và giảm cảm giác thèm ăn. Ớt có thể được sử dụng trong nhiều món ăn từ các món xào đến các món súp."
+    "description": "Ớt cay có khả năng làm tăng hương vị cho món ăn và cung cấp nhiều vitamin C, A. Nó cũng chứa capsaicin, một hợp chất có lợi cho sức khỏe giúp tăng cường trao đổi chất và giảm cảm giác thèm ăn. Ớt có thể được sử dụng trong nhiều món ăn từ các món xào đến các món súp.",
+    "unit": "quả",
+    "uses": "Tăng cường trao đổi chất, cung cấp vitamin C, A, làm tăng hương vị món ăn."
   },
   {
     "name": "Mít Thái",
@@ -87,7 +105,9 @@
     "id": 22,
     "price": 20000,
     "category": "fruit",
-    "description": "Mít Thái có vị ngọt đậm và mùi thơm dễ chịu. Đây là một loại trái cây nhiệt đới chứa nhiều vitamin C, chất xơ và các khoáng chất như kali và magiê. Mít Thái có thể ăn trực tiếp hoặc chế biến thành các món tráng miệng, sinh tố và món ăn vặt."
+    "description": "Mít Thái có vị ngọt đậm và mùi thơm dễ chịu. Đây là một loại trái cây nhiệt đới chứa nhiều vitamin C, chất xơ và các khoáng chất như kali và magiê. Mít Thái có thể ăn trực tiếp hoặc chế biến thành các món tráng miệng, sinh tố và món ăn vặt.",
+    "unit": "quả",
+    "uses": "Cung cấp vitamin C, chất xơ, kali, magiê, ăn trực tiếp hoặc chế biến món tráng miệng."
   },
   {
     "name": "Thanh long",
@@ -96,7 +116,9 @@
     "id": 25,
     "price": 40000,
     "category": "fruit",
-    "description": "Thanh long là trái cây nhiệt đới với vị ngọt nhẹ và kết cấu giòn, cung cấp nhiều vitamin C, chất xơ và các khoáng chất. Nó không chỉ ngon mà còn bổ dưỡng, hỗ trợ tiêu hóa và giúp cải thiện sức khỏe làn da. Thích hợp để ăn trực tiếp hoặc dùng trong các món salad và sinh tố."
+    "description": "Thanh long là trái cây nhiệt đới với vị ngọt nhẹ và kết cấu giòn, cung cấp nhiều vitamin C, chất xơ và các khoáng chất. Nó không chỉ ngon mà còn bổ dưỡng, hỗ trợ tiêu hóa và giúp cải thiện sức khỏe làn da. Thích hợp để ăn trực tiếp hoặc dùng trong các món salad và sinh tố.",
+    "unit": "kg",
+    "uses": "Cung cấp vitamin C, chất xơ, hỗ trợ tiêu hóa, cải thiện sức khỏe làn da."
   },
   {
     "name": "Xoài tứ quý",
@@ -105,7 +127,9 @@
     "id": 23,
     "price": 25000,
     "category": "fruit",
-    "description": "Xoài tứ quý có vị ngọt thanh và hương thơm đặc trưng, thích hợp cho món tráng miệng và sinh tố. Xoài cung cấp nhiều vitamin A và C, rất tốt cho sức khỏe mắt và tăng cường hệ miễn dịch. Đây là một lựa chọn lý tưởng cho các món tráng miệng mát lạnh và ngon miệng."
+    "description": "Xoài tứ quý có vị ngọt thanh và hương thơm đặc trưng, thích hợp cho món tráng miệng và sinh tố. Xoài cung cấp nhiều vitamin A và C, rất tốt cho sức khỏe mắt và tăng cường hệ miễn dịch. Đây là một lựa chọn lý tưởng cho các món tráng miệng mát lạnh và ngon miệng.",
+    "unit": "quả",
+    "uses": "Cung cấp vitamin A và C, tốt cho sức khỏe mắt và hệ miễn dịch, dùng trong món tráng miệng và sinh tố."
   },
   {
     "name": "Cóc lớn",
@@ -114,6 +138,8 @@
     "id": 24,
     "price": 30000,
     "category": "fruit",
-    "description": "Cóc lớn có vị chua ngọt đặc trưng, giúp kích thích tiêu hóa và làm tươi mát khẩu vị. Nó cung cấp nhiều vitamin và chất chống oxy hóa, có lợi cho sức khỏe. Cóc lớn thường được dùng làm món ăn nhẹ hoặc kết hợp trong các món tráng miệng."
+    "description": "Cóc lớn có vị chua ngọt đặc trưng, giúp kích thích tiêu hóa và làm tươi mát khẩu vị. Nó cung cấp nhiều vitamin và chất chống oxy hóa, có lợi cho sức khỏe. Cóc lớn thường được dùng làm món ăn nhẹ hoặc kết hợp trong các món tráng miệng.",
+    "unit": "quả",
+    "uses": "Kích thích tiêu hóa, làm tươi mát khẩu vị, cung cấp vitamin và chất chống oxy hóa."
   }
 ]

@@ -27,12 +27,12 @@ const Footer = (props) => {
   let currentPath = location.pathname
   const [showFooter, setShowFooter] = useState(true);
   useEffect(() => {
-    if(currentPath == '/about' || currentPath.startsWith("/product/")){
+    if(currentPath == '/about' || currentPath.startsWith("/product/") || currentPath.startsWith("/discount")){
       setShowFooter(false)
     }else{
       setShowFooter(true)
     }
-  },[currentPath])
+  },[location.pathname])
   const CartIcon = () => {
     return (
       <div className="relative inline-block">
