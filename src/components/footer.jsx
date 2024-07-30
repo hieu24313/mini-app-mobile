@@ -13,7 +13,7 @@ import {
 } from "zmp-ui";
 import { useCart } from "../context/CartContext";
 import { useLocation } from "react-router-dom";
-import shopingcart from "../../public/shopping_cart.png"
+import shopingcart from "../../public/shopping_cart.png";
 
 const Footer = (props) => {
   const navigate = useNavigate();
@@ -24,27 +24,29 @@ const Footer = (props) => {
   const [popupVisible, setPopupVisible] = useState(false);
   const [deleteProTemp, setDeleteProTemp] = useState(null);
   const location = useLocation();
-  let currentPath = location.pathname
+  let currentPath = location.pathname;
   const [showFooter, setShowFooter] = useState(true);
   useEffect(() => {
-    if(currentPath == '/about' || currentPath.startsWith("/product/") || currentPath.startsWith("/discount")){
-      setShowFooter(false)
-    }else{
-      setShowFooter(true)
-    }
-  },[location.pathname])
+    const paths = ["/about", "/product/", "/discount", "/news"];
+
+    const shouldHideFooter = paths.some(
+      (path) => currentPath === path || currentPath.startsWith(path)
+    );
+    setShowFooter(!shouldHideFooter);
+
+  }, [location.pathname]);
   const CartIcon = () => {
     return (
       <div className="relative inline-block">
-            <img src={shopingcart} alt="cart" className="w-8 h-8" />
-            {count > 0 && (
-                <div className="absolute top-0 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
-                    {count}
-                </div>
-            )}
-        </div>
-  );
-  }
+        <img src={shopingcart} alt="cart" className="w-8 h-8" />
+        {count > 0 && (
+          <div className="absolute top-0 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+            {count}
+          </div>
+        )}
+      </div>
+    );
+  };
   return (
     <>
       {showFooter ? (
@@ -118,7 +120,7 @@ const Footer = (props) => {
                       {products.map((p) => {
                         return (
                           <>
-                            <div className="mb-12 flex mt-4">
+                            <div key={p.id} className="mb-12 flex mt-4">
                               <Avatar src={p.photo_url} />
                               <div className="flex flex-col flex-grow ml-4">
                                 <Text className="font-bold">{p.name}</Text>

@@ -77,8 +77,11 @@ export const AuthProvider = ({ children }) => {
     getUserInfoPerm();
   }, []);
 
+  const updateUser = (newUser) => {
+    setUser(newUser)
+  }
   return (
-    <AuthContext.Provider value={{ user, isAuth }}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={{ user, isAuth, updateUser }}>{children}</AuthContext.Provider>
   );
 };
 

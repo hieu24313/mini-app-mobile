@@ -39,10 +39,10 @@ const HomePage = () => {
 
   return (
     <Page
-      className="page bg-white"
+      className="page bg-white padding-t-0"
       style={{ paddingRight: "0px", paddingLeft: "8px", zIndex: "-1" }}
     >
-      <div
+      {/* <div
         className="absolute inset-0 bg-customGreen w-full h-1/3"
         style={{
           top: "-8px",
@@ -51,8 +51,20 @@ const HomePage = () => {
           borderRadius: "0 0 33% 33%",
           zIndex: 0,
         }}
-      ></div>
+      ></div> */}
       <div className="relative" style={{ zIndex: 1 }}>
+
+      <div
+        className="absolute inset-0 bg-customGreen w-full h-1/6"
+        style={{
+          top: "-8px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          borderRadius: "0 0 33% 33%",
+          zIndex: -1,
+        }}
+      ></div>
+
         <div className="section-container">
           <UserCard user={user} />
         </div>
@@ -65,7 +77,7 @@ const HomePage = () => {
               Member
             </div>
             <div className="flex justify-between">
-              <span className="mt-4">50,000 đ</span>
+              <span className="mt-4">500,000 đ</span>
               <Icon className="mt-4 mr-6" icon="zi-chevron-right" />
             </div>
           </div>
@@ -80,7 +92,7 @@ const HomePage = () => {
                 <img className="icon w-12 h-12" src={gift} alt="icon" />
                 <div className="mt-1">Ưu đãi</div>
               </a>
-              <a href="/" className="flex flex-col items-center w-20">
+              <a onClick={() => navigate("/news")} className="flex flex-col items-center w-20">
                 <img className="icon w-12 h-12" src={notification} alt="icon" />
                 <div className="mt-1">Thông báo</div>
               </a>
@@ -249,7 +261,8 @@ const HomePage = () => {
                 <div className="flex bg-white rounded-lg w-48 p-1">
                   <img
                     className="h-32 w-full object-cover rounded-lg"
-                    src={products[4].photo_url}
+                    src="https://xuannong.vn/images/ky-thuat-trong-cay-an-qua.jpg"
+                    // src={products[4].photo_url}
                     alt=""
                   />
                 </div>

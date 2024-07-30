@@ -39,7 +39,7 @@ const ProductDetail = (props) => {
                 />
               </div>
               <div className="ml-3 mt-3 ">
-                <Text.Title bold>{product.name}</Text.Title>
+                <Text.Title bold="true">{product.name}</Text.Title>
               </div>
               <div className="ml-3 mt-3 text-customGreen font-bold text-lg">
                 {product.price.toLocaleString()} đ
@@ -56,12 +56,12 @@ const ProductDetail = (props) => {
               </div> */}
               <div className="h-full w-full ml-3 mt-1 bg-white">
                 <div className="flex mb-2">
-                  <Text className="mr-1" bold>
+                  <Text className="mr-1" bold="true">
                     Đơn vị:
                   </Text>
                   <Text> {product.unit}</Text>
                 </div>
-                <Text className="mb-2" bold>
+                <Text className="mb-2" bold="true">
                   Chi tiết sản phẩm
                 </Text>
                 <div className="">{product.description}</div>

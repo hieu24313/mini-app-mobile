@@ -16,7 +16,7 @@ import { useAuth } from "../context/AuthContext";
 const AboutPage = (props) => {
   const [actionSheetOpened, setActionSheetOpened] = React.useState(false);
   const navigate = useNavigate();
-  const { user } = useAuth();
+  const { user, updateUser } = useAuth();
   const [newInfo, setNewInfo] = useState(user);
 
   const change = (key, value) => {
@@ -117,16 +117,24 @@ const AboutPage = (props) => {
             id="gender"
             className="flex mt-2 mb-4 items-center justify-between"
           >
-            <Radio.Group vlaue={user.gender} className="flex ">
-              <Radio checked name="gender" value="Male" label="Nam" />
+            <Radio.Group defaultValue={user.gender} className="flex ">
+              <Radio 
+              // checked 
+              onChange={() => change("gender", args.target.value)}
+              name="gender" 
+              value="Male" 
+              label="Nam" />
+              
               <Radio
                 // checked={user.gender == "Female" ? true : false}
+                onChange={() => change("gender", args.target.value)}
                 name="gender"
                 value="Female"
                 label="Nữ"
               />
               <Radio
                 // checked={user.gender == "Other" ? true : false}
+                onChange={() => change("gender", args.target.value)}
                 name="gender"
                 value="Other"
                 label="Khác"
@@ -136,8 +144,12 @@ const AboutPage = (props) => {
         </div>
         <div className="bg-white  w-full flex items-center justify-center mt-8">
           <button
-          onClick={() => navigate('/user')}
-          className="rounded-xl h-12 bottom-0 bg-customGreen text-white w-4/5 text-center mb-4 flex items-center justify-center">
+            onClick={() => {
+              updateUser(newInfo);
+              navigate("/user");
+            }}
+            className="rounded-xl h-12 bottom-0 bg-customGreen text-white w-4/5 text-center mb-4 flex items-center justify-center"
+          >
             Lưu
           </button>
         </div>

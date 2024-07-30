@@ -12,6 +12,7 @@ import UserPage from "../pages/user";
 import AboutPage from "../pages/about";
 import ProductDetail from "../pages/product-detail";
 import Discount from "../pages/discount";
+import News from "../pages/news";
 
 const MyApp = () => {
 
@@ -30,6 +31,7 @@ const MyApp = () => {
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/product/:id" element={<ProductDetail />} />
                 <Route path="/discount" element={<Discount />} />
+                <Route path="/news" element={<News />} />
               </AnimationRoutes>
               <Footer />
             </ZMPRouter>
