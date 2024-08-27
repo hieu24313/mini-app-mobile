@@ -8,7 +8,8 @@ import { useCart } from "../context/CartContext";
 const ProductDetail = (props) => {
   const [product, setProduct] = useState();
   const { id } = useParams();
-  const { products, removeFromCart, updateQuantity, count, total, addToCart } = useCart();
+  const { products, removeFromCart, updateQuantity, count, total, addToCart } =
+    useCart();
   useEffect(() => {
     // console.log(json);
     const foundProduct = json.find((prod) => prod.id == id);
@@ -38,12 +39,13 @@ const ProductDetail = (props) => {
                   alt="share"
                 />
               </div>
-              <div className="ml-3 mt-3 ">
+              <div className="ml-3 mt-3 text-customGreen font-bold text-lg">
+                {product.price.toLocaleString()}đ
+              </div>
+              <div className=" mt-3 border-b-2 pl-3 pb-3">
                 <Text.Title bold="true">{product.name}</Text.Title>
               </div>
-              <div className="ml-3 mt-3 text-customGreen font-bold text-lg">
-                {product.price.toLocaleString()} đ
-              </div>
+
               {/* <div className="h-16 w-full flex justify-center items-center mt-1 bg-green-50">
                 <div className="flex bg-[#D8BFD8] h-14 w-[96%] rounded-sm">
                   <div className="">
@@ -55,16 +57,33 @@ const ProductDetail = (props) => {
                 </div>
               </div> */}
               <div className="h-full w-full ml-3 mt-1 bg-white">
-                <div className="flex mb-2">
+                <div className="flex mb-2 pt-1">
                   <Text className="mr-1" bold="true">
                     Đơn vị:
                   </Text>
                   <Text> {product.unit}</Text>
                 </div>
-                <Text className="mb-2" bold="true">
-                  Chi tiết sản phẩm
-                </Text>
-                <div className="">{product.description}</div>
+                <div className="pt-2 pb-2">
+                  <div className="flex w-full h-9">
+                    <div className="flex items-center justify-center">
+                      <img
+                        className="w-9 h-9 rounded-full"
+                        src="https://anvientv.com.vn/uploads/upload/1664959678_anh-co-do-sao-vang.jpg"
+                        alt="cửa hàng"
+                      />
+                      <Text className="ml-2 font-bold">
+                        Trái cây tươi Bình Thạnh
+                      </Text>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border-t-2 pt-[4px]">
+                  <Text className="mb-2" bold="true">
+                    Chi tiết sản phẩm
+                  </Text>
+                  <div className="leading-relaxed">{product.description}</div>
+                </div>
               </div>
             </div>
           ) : (
@@ -90,7 +109,10 @@ const ProductDetail = (props) => {
             <Icon icon="zi-chat" className="text-gray-600" />
             <div className="text-sm mt-1">Chat ngay</div>
           </div>
-          <button onClick={() => addToCart(product)} className="text-customGreen bg-white rounded flex justify-center items-center w-2/5 h-3/5 border-customGreen border-2">
+          <button
+            onClick={() => addToCart(product)}
+            className="text-customGreen bg-white rounded flex justify-center items-center w-2/5 h-3/5 border-customGreen border-2"
+          >
             <span className="font-bold">Thêm vào giỏ hàng</span>
           </button>
           <button className="bg-customGreen text-white rounded flex justify-center items-center w-2/5 h-3/5">

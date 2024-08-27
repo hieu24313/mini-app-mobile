@@ -111,7 +111,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <div className="p-4 pr-0 left-0 right-0 pl-0">
+        <div className="p-4 pr-0 left-0 right-0 pl-0 ml-2">
           <div className="flex justify-between">
             <Text className="font-bold text-xl">Sản phẩm mới</Text>
             <Text className="text-customGreen mr-2">Xem thêm</Text>
@@ -164,7 +164,7 @@ const HomePage = () => {
             )}
           </div>
         </div>
-        <div className="p-4 pr-0 left-0 right-0 pl-0">
+        <div className="p-4 pr-0 left-0 right-0 pl-0 ml-2">
           <div className="flex justify-between">
             <Text className="font-bold text-xl">Sản phẩm bán chạy</Text>
             <Text className="text-customGreen mr-2">Xem thêm</Text>
@@ -215,7 +215,7 @@ const HomePage = () => {
             )}
           </div>
         </div>
-        <div className="p-4 pr-0 pl-0">
+        <div className="p-4 pr-0 pl-0 ml-2">
           <div className="flex justify-between">
             <Text className="font-bold text-xl">Tin tức</Text>
             <Text className="text-customGreen mr-2">Xem thêm</Text>
@@ -258,7 +258,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="p-4 pr-0 pl-0">
+        <div className="p-4 pr-0 pl-0 ml-2">
           <div className="flex justify-between">
             <Text className="font-bold text-xl">Kỹ thuật cây trồng</Text>
             <Text className="text-customGreen mr-2">Xem thêm</Text>
