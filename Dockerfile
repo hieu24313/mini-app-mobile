@@ -1,21 +1,16 @@
-# Base image
-FROM node:18-alpine
+FROM node:18
 
-# Set the working directory
+# Đặt thư mục làm việc là /app
 WORKDIR /app
 
-# Copy the package.json and yarn.lock files to the container
-COPY package.json yarn.lock ./
+# Sao chép package.json và package-lock.json vào thư mục làm việc
+COPY package*.json ./
 
-# Install dependencies
-RUN yarn install
+# Cài đặt các dependency
+RUN npm install
 
-# Copy the rest of the application code to the container
+# Sao chép mã nguồn vào thư mục làm việc
 COPY . .
 
-
-# Expose the port the app will run on
-EXPOSE 3000
-
-# Command to run the app
-CMD ["yarn", "start"]
+# Khởi chạy ứng dụng
+CMD ["npm", "start"]
