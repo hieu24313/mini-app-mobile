@@ -15,11 +15,10 @@
     "Samsung >= 5"
   ],
   "scripts": {
-    "start": "zmp start",
+    "start": "zmp start --no-open",
     "deploy": "zmp deploy",
     "build:css": "postcss src/css/tailwind.css -o src/css/styles.css"
   },
-  
   "dependencies": {
     "@vitejs/plugin-react": "^1.3.2",
     "axios": "^1.7.2",
